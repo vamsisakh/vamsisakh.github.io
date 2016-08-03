@@ -148,7 +148,7 @@
   };
 
   setupIsoytpe = function() {
-    $("#vis_worldwar").isotope({
+    $("#vis_coldwar").isotope({
       itemSelector: '.chart',
       layoutMode: 'fitRows',
       getSortData: {
@@ -167,7 +167,7 @@
         }
       }
     });
-    return $("#vis_worldwar").isotope({
+    return $("#vis_coldwar").isotope({
       sortBy: 'name'
     });
   };
@@ -181,16 +181,16 @@
         console.log(error);
       }
       data = transformData(rawData);
-      plotData("#vis_worldwar", data, plot);
+      plotData("#vis_coldwar", data, plot);
       return setupIsoytpe();
     };
-    queue().defer(d3.tsv, "data/worldwar2.tsv").await(display);
+    queue().defer(d3.tsv, "data/coldwar.tsv").await(display);
     return d3.select("#button-wrap").selectAll("div").on("click", function() {
       var id;
       id = d3.select(this).attr("id");
       d3.select("#button-wrap").selectAll("div").classed("active", false);
       d3.select("#" + id).classed("active", true);
-      return $("#vis_worldwar").isotope({
+      return $("#vis_coldwar").isotope({
         sortBy: id
       });
     });
