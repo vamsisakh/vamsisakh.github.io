@@ -1,13 +1,16 @@
 
 .container {
   width: 1050px;
-  overflow:scroll;
+ /* overflow:scroll;*/
 }
 
 .rcorner {    
     border: 3px solid #73AD21;
     padding: 10px; 
 }   
+
+
+
 
 h1 {
   font-size: 24px;
@@ -84,6 +87,16 @@ svg {
 .hidden {
   display:none;
   opacity: 0.0;
+}
+
+.hidden-mod {
+  display:none;
+  /*opacity: 0.0;*/
+}
+
+.visible-off {
+visibility: "visible";
+height:100vh;
 }
 
 #button-wrap {

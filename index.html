@@ -110,7 +110,37 @@
     </section>
 
 <section id="stories">
-  <div class="container container-s">
+<div class="visible-off">
+<div class="row">
+<div class="col-md-2">
+  <ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a id="ch" href="#china">China</a></li>
+    <li><a id="ww" href="#worldwar">World War</a></li>
+    <li><a id="cw" href="#coldwar">Cold War</a></li>
+  </ul>
+</div>
+<div class="col-md-10">
+<div id="china" class="hidden-mod">
+   <div class="container">
+    <div id="lead" class="rcorners">
+      <h2>The Rise of China</h2>
+      <p>China was admitted in to the IOC in 1979</p>
+      <p>China boycotted the 1980 over the USSR's invasion of Afghanistan</p>
+      <p>China has been a rising Olympic power starting with 76 medals in 1984 to 184 medals in 2008 at the Beijing Olympics. With that tally, China ranked second in the overall medal count, topping traditional Olympic super powers such as Russia, Germany and Japan</p>
+
+    <div id="main" >
+      <!--div id="button-wrap">
+        <div id="count" class="button">COUNT</div>
+        <div id="name" class="button active">NAME</div>
+      </div-->
+      <div id="vis_china"></div>
+    </div>
+    </div>
+  </div> <!--! end of #container -->
+</div>
+<div id="worldwar" class="hidden-mod">
+<div class="container container-s">
     <div id="lead" class="rcorners">
         <h1>Olympics as a proxy for World Order</h1>
       <h2>World War II</h2>
@@ -119,17 +149,19 @@
       <p>Due to World War 2 the 1940 (to be held in Tokyo) and 1944 (to be held in Helsinki) editions of the Olympics were cancelled</p>
       <p>Olympic events resumed in 1948 at London</p>
    
-
     <div id="main" >
       <!--div id="button-wrap">
         <div id="count" class="button">COUNT</div>
         <div id="name" class="button active">NAME</div>
       </div>-->
-
       <div id="vis_worldwar"></div>
+
     </div>
  </div>
     </div> <!--end of container-->
+
+</div>
+  <div id="coldwar" class="hidden-mod">
 
       <div class="container container-s">
     <div id="lead" class="rcorners">
@@ -144,31 +176,16 @@
         <div id="count" class="button">COUNT</div>
         <div id="name" class="button active">NAME</div>
       </div-->
-
       <div id="vis_coldwar"></div>
+
     </div>
 
  </div>
   </div> <!--! end of #container -->
-
-   <div class="container container-s">
-    <div id="lead" class="rcorners">
-      <h2>The Rise of China</h2>
-      <p>China was admitted in to the IOC in 1979</p>
-      <p>China boycotted the 1980 over the USSR's invasion of Afghanistan</p>
-      <p>China has been a rising Olympic power starting with 76 medals in 1984 to 184 medals in 2008 at the Beijing Olympics. With that tally, China ranked second in the overall medal count, topping traditional Olympic super powers such as Russia, Germany and Japan</p>
-
-    <div id="main" >
-      <!--div id="button-wrap">
-        <div id="count" class="button">COUNT</div>
-        <div id="name" class="button active">NAME</div>
-      </div-->
-
-      <div id="vis_china"></div>
-    </div>
-    </div>
-  </div> <!--! end of #container -->
-
+</div>
+</div>
+</div>
+</div>
   </section>
 
     <!-- Team Section -->
@@ -256,10 +273,36 @@
     <script type="text/javascript" src="js/worldwar2story.js"></script>
     <script type="text/javascript" src="js/chinastory.js"></script>
     <script type="text/javascript" src="js/coldwarstory.js"></script>
+
     <script type="text/javascript">
-      $(document).ready(function() {
-      });
+          
+          $(document).ready(function (){
+        $("#ww").click(function(){
+            $("#worldwar").show()
+            $("#china").hide()
+            $("#coldwar").hide()
+        })});
+
+        $(document).ready(function (){
+        $("#ch").click(function(){
+            $("#china").show()
+            $("#worldwar").hide()
+            $("#coldwar").hide()
+
+        })});
+
+          $(document).ready(function (){
+        $("#cw").click(function(){
+            $("#coldwar").show()
+            $("#worldwar").hide()
+            $("#china").hide()
+        })});
+
+
+
     </script>
+
+
 
 </body>
 
