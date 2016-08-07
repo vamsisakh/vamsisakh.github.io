@@ -446,10 +446,44 @@
             var det = null;
             var det_aside=null;
             var slides=1;
+            var det_t0 = null;
+            var slides_t0=1;
+            var det_cw = null;
+            var det_aside_cw=null;
+            var slides_cw=1;
+            var det_ww = null;
+            var det_aside_ww=null;
+            var slides_ww=1;
       $(document).ready(function(){
 
         $("#ch").click(function(e){
             e.preventDefault(); 
+                if(slides_cw){}
+                    else{
+                det_cw = $("#insert-coldwar").detach();
+                det_cw.hide();
+                det_aside_cw=$("#insert-coldwar-aside").detach();
+                det_aside_cw.hide(); 
+                slides_cw = 1; 
+                    }
+
+                if(slides_ww){}
+                    else{
+                    det_ww = $("#insert-worldwar").detach();
+                    det_ww.hide();
+                    det_aside_ww=$("#insert-worldwar-aside").detach();
+                    det_aside_ww.hide(); 
+                    slides_ww = 1;    
+                    }
+
+                if(slides_t0){}
+                    else{
+                det_t0 = $("#viz1470601857972").detach();
+                det_t0.hide();
+                slides_t0 = 1;            
+                $("#stories .row .col-md-10").attr('class', 'col-md-7');
+                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
+
         if(slides) {
             if(det){
                             $("#china").append(det);
@@ -480,14 +514,35 @@
             }  
         })});
 
-              var det_ww = null;
-            var det_aside_ww=null;
-            var slides_ww=1;
       $(document).ready(function(){
 
         $("#ww").click(function(e){
             e.preventDefault();
-        
+                        if(slides){}
+                    else{
+                det = $("#insert-china").detach();
+                det.hide();
+                det_aside=$("#insert-china-aside").detach();
+                det_aside.hide(); 
+                slides = 1; 
+                    }
+
+                if(slides_cw){}
+                    else{
+                    det_cw = $("#insert-coldwar").detach();
+                    det_cw.hide();
+                    det_aside_cw=$("#insert-coldwar-aside").detach();
+                    det_aside_cw.hide(); 
+                    slides_cw = 1;    
+                    }
+
+                if(slides_t0){}
+                    else{
+                det_t0 = $("#viz1470601857972").detach();
+                det_t0.hide();
+                slides_t0 = 1;            
+                $("#stories .row .col-md-10").attr('class', 'col-md-7');
+                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
         if(slides_ww) {
             if(det_ww){
                             $("#worldwar").append(det_ww);
@@ -518,14 +573,37 @@
             }  
         })});
 
-              var det_cw = null;
-            var det_aside_cw=null;
-            var slides_cw=1;
+
+     
       $(document).ready(function(){
 
         $("#cw").click(function(e){
-            e.preventDefault();
-        
+                e.preventDefault();
+                if(slides){}
+                    else{
+                det = $("#insert-china").detach();
+                det.hide();
+                det_aside=$("#insert-china-aside").detach();
+                det_aside.hide(); 
+                slides = 1; 
+                    }
+
+                if(slides_ww){}
+                    else{
+                    det_ww = $("#insert-worldwar").detach();
+                    det_ww.hide();
+                    det_aside_ww=$("#insert-worldwar-aside").detach();
+                    det_aside_ww.hide(); 
+                    slides_ww = 1;    
+                    }
+
+                if(slides_t0){}
+                    else{
+                det_t0 = $("#viz1470601857972").detach();
+                det_t0.hide();
+                slides_t0 = 1;            
+                $("#stories .row .col-md-10").attr('class', 'col-md-7');
+                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
         if(slides_cw) {
             if(det_cw){
                             $("#coldwar").append(det_cw);
@@ -556,12 +634,36 @@
             }  
         })});
 
-         var det_t0 = null;
-        var slides_t0=1;
       $(document).ready(function(){
         $("#t0a").click(function(e){
-            e.preventDefault();
-        
+                e.preventDefault();
+
+                if(slides){}
+                    else{
+                det = $("#insert-china").detach();
+                det.hide();
+                det_aside=$("#insert-china-aside").detach();
+                det_aside.hide(); 
+                slides = 1; 
+                    }
+
+
+                if(slides_ww){}
+                    else{
+                    det_ww = $("#insert-worldwar").detach();
+                    det_ww.hide();
+                    det_aside_ww=$("#insert-worldwar-aside").detach();
+                    det_aside_ww.hide(); 
+                    slides_ww = 1;   
+                    }
+
+                if(slides_cw){}
+                    else{
+                det_cw = $("#insert-coldwar").detach();
+                det_cw.hide();
+                det_aside_cw=$("#insert-coldwar-aside").detach();
+                det_aside_cw.hide(); 
+                slides_cw = 1;}    
         if(slides_t0) {
             if(det_t0)
                 {
@@ -570,10 +672,10 @@
             else{
                 $("#t0b").append($("#viz1470601857972"));
                 }
-                $("#viz1470601857972").css("display","block");
-                slides_t0 = null;
-                $("#stories .row .col-md-7").attr('class', 'col-md-10');
-                $("#stories .row .col-md-3").attr('class', 'col-md-1');
+            $("#viz1470601857972").css("display","block");
+            slides_t0 = null;
+            $("#stories .row .col-md-7").attr('class', 'col-md-10');
+            $("#stories .row .col-md-3").attr('class', 'col-md-1');
 
           }
           else {
