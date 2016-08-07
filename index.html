@@ -116,12 +116,14 @@
     <li><a id="ch" href="#china">China</a></li>
     <li><a id="ww" href="#worldwar">World War</a></li>
     <li><a id="cw" href="#coldwar">Cold War</a></li>
+    <li><a id="t0a" href="#t0b">Mens 100m Sprint</a></li>
   </ul>
 </div>
 <div class="col-md-7">
     <div id="china">        </div>
     <div id="worldwar">     </div>
     <div id="coldwar">      </div>
+    <div id="t0b">  </div>
 </div>
 
 <div class="col-md-3">
@@ -419,6 +421,8 @@
 
     </div>
 
+
+
     <!-- jQuery -->
    <!-- <script src="vendor/jquery/jquery.min.js"></script>-->
 
@@ -548,6 +552,30 @@
                 det_aside_cw=$("#insert-coldwar-aside").detach();
                 det_aside_cw.hide(); 
                 slides_cw = 1;            
+            }  
+        })});
+
+         var det_t0 = null;
+        var slides_t0=1;
+      $(document).ready(function(){
+        $("#t0a").click(function(e){
+            e.preventDefault();
+        
+        if(slides_t0) {
+            if(det_t0)
+                {
+                $("#t0b").append(det_t0);
+                }
+            else{
+                $("#t0b").append($("#viz1470586553726"));
+                }
+                $("#viz1470586553726").css("display","block");
+                slides_t0 = null;
+          }
+          else {
+                det_t0 = $("#viz1470586553726").detach();
+                det_t0.hide();
+                slides_t0 = 1;            
             }  
         })});
     </script>
