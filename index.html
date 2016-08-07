@@ -120,6 +120,10 @@
   </ul>
 </div>
 <div class="col-md-7">
+    <div id="direction"> 
+    Welcome to Stories! In this section you will find interesting insights from past Olympics<br>
+    Click on a story shown in the left panel to find out more about it.
+    </div>
     <div id="china">        </div>
     <div id="worldwar">     </div>
     <div id="coldwar">      </div>
@@ -454,10 +458,70 @@
             var det_ww = null;
             var det_aside_ww=null;
             var slides_ww=1;
+
+        $(document).ready(function(){
+            $("#ch").click(function(){
+
+            if((slides +slides_cw +slides_ww +slides_t0)==4){
+                    $("#direction").css("display","block")
+                }
+                else
+                {
+                    $("#direction").css("display","none")
+
+                }
+            })
+        })
+
+
+        $(document).ready(function(){
+            $("#t0a").click(function(){
+            if((slides +slides_cw +slides_ww +slides_t0)==4){
+                    $("#direction").css("display","block")
+                }
+                else
+                {
+                    $("#direction").css("display","none")
+
+                }
+            })
+        })
+
+
+        $(document).ready(function(){
+            $("#cw").click(function(){
+
+            if((slides +slides_cw +slides_ww +slides_t0)==4){
+                    $("#direction").css("display","block")
+                }
+                else
+                {
+                    $("#direction").css("display","none")
+
+                }
+            })
+        })
+
+
+        $(document).ready(function(){
+            $("#ww").click(function(){
+
+            if((slides +slides_cw +slides_ww +slides_t0)==4){
+                    $("#direction").css("display","block")
+                }
+                else
+                {
+                    $("#direction").css("display","none")
+
+                }
+            })
+        })
+
       $(document).ready(function(){
 
         $("#ch").click(function(e){
             e.preventDefault(); 
+
                 if(slides_cw){}
                     else{
                 det_cw = $("#insert-coldwar").detach();
@@ -504,13 +568,16 @@
                 $("#insert-china").css("display","block");
                 $("#insert-china-aside").css("display","block");
                 slides = null;
+                $("#direction").css("display","none")
+
           }
           else {
                 det = $("#insert-china").detach();
                 det.hide();
                 det_aside=$("#insert-china-aside").detach();
                 det_aside.hide(); 
-                slides = 1;            
+                slides = 1;
+                $("#direction").css("display","block")
             }  
         })});
 
@@ -563,13 +630,16 @@
                 $("#insert-worldwar").css("display","block");
                 $("#insert-worldwar-aside").css("display","block");
                 slides_ww = null;
+                $("#direction").css("display","none")
+
           }
           else {
                 det_ww = $("#insert-worldwar").detach();
                 det_ww.hide();
                 det_aside_ww=$("#insert-worldwar-aside").detach();
                 det_aside_ww.hide(); 
-                slides_ww = 1;            
+                slides_ww = 1; 
+                $("#direction").css("display","block")
             }  
         })});
 
@@ -624,13 +694,15 @@
                 $("#insert-coldwar").css("display","block");
                 $("#insert-coldwar-aside").css("display","block");
                 slides_cw = null;
+                $("#direction").css("display","none")
           }
           else {
                 det_cw = $("#insert-coldwar").detach();
                 det_cw.hide();
                 det_aside_cw=$("#insert-coldwar-aside").detach();
                 det_aside_cw.hide(); 
-                slides_cw = 1;            
+                slides_cw = 1; 
+                $("#direction").css("display","block")
             }  
         })});
 
@@ -646,7 +718,6 @@
                 det_aside.hide(); 
                 slides = 1; 
                     }
-
 
                 if(slides_ww){}
                     else{
@@ -674,6 +745,7 @@
                 }
             $("#viz1470601857972").css("display","block");
             slides_t0 = null;
+            $("#direction").css("display","none")
             $("#stories .row .col-md-7").attr('class', 'col-md-10');
             $("#stories .row .col-md-3").attr('class', 'col-md-1');
 
@@ -684,6 +756,7 @@
                 slides_t0 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
                 $("#stories .row .col-md-1").attr('class', 'col-md-3');
+                $("#direction").css("display","block")
             }  
         })});
     </script>

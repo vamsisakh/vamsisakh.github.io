@@ -59,6 +59,14 @@ display:none;
 height:50vh;
 }
 
+#direction{
+align:center;
+text-align: center;
+vertical-align: middle;
+display:block;
+font-weight:bold;
+}
+
 #about {
 height:100vh;
 padding-top: 100px;
