@@ -4,7 +4,7 @@
   SmallMultiples = function() {
     var area, bisect, caption, chart, circle, curYear, data, format, height, line, margin, mousemove, mouseout, mouseover, setupScales, width, xScale, xValue, yAxis, yScale, yValue;
     width = 200;
-    height = 150;
+    height = 175;
     margin = {
       top: 15,
       right: 10,
@@ -63,10 +63,10 @@
         g = svg.select("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
         g.append("rect").attr("class", "background").style("pointer-events", "all").attr("width", width + margin.right).attr("height", height).on("mouseover", mouseover).on("mousemove", mousemove).on("mouseout", mouseout);
         lines = g.append("g");
-        lines.append("path").attr("class", "area").style("pointer-events", "none").attr("d", function(c) {
+        lines.append("path").attr("class", "greenarea").style("pointer-events", "none").attr("d", function(c) {
           return area(c.values);
         });
-        lines.append("path").attr("class", "line").style("pointer-events", "none").attr("d", function(c) {
+        lines.append("path").attr("class", "greenline").style("pointer-events", "none").attr("d", function(c) {
           return line(c.values);
         });
         lines.append("text").attr("class", "title").attr("text-anchor", "middle").attr("y", height).attr("dy", margin.bottom / 2 + 5).attr("x", width / 2).text(function(c) {
@@ -148,7 +148,7 @@
   };
 
   setupIsoytpe = function() {
-    $("#vis_worldwar").isotope({
+    $("#vis-worldwar").isotope({
       itemSelector: '.chart',
       layoutMode: 'fitRows',
       getSortData: {
@@ -163,11 +163,11 @@
         name: function(e) {
           var d;
           d = d3.select(e).datum();
-          return d.key;
+          return d.Id;
         }
       }
     });
-    return $("#vis_worldwar").isotope({
+    return $("#vis-worldwar").isotope({
       sortBy: 'name'
     });
   };
@@ -181,7 +181,7 @@
         console.log(error);
       }
       data = transformData(rawData);
-      plotData("#vis_worldwar", data, plot);
+      plotData("#vis-worldwar", data, plot);
       return setupIsoytpe();
     };
     queue().defer(d3.tsv, "data/worldwar2.tsv").await(display);
@@ -190,7 +190,7 @@
       id = d3.select(this).attr("id");
       d3.select("#button-wrap").selectAll("div").classed("active", false);
       d3.select("#" + id).classed("active", true);
-      return $("#vis_worldwar").isotope({
+      return $("#vis-worldwar").isotope({
         sortBy: id
       });
     });

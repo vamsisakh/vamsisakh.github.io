@@ -35,16 +35,6 @@ font-size:2em;
 text-align: center;
 }
 
-#about {
-height:100vh;
-padding-top: 100px;
-}
-
-#stories {
-height:200vh;
-/*padding-top: 100px;*/
-}
-
 #lead {
 height:100vh;
 padding-top: 100px;

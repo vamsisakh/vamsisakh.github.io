@@ -15,6 +15,7 @@
     circle = null;
     caption = null;
     curYear = null;
+    storytext = null; 
     bisect = d3.bisector(function(d) {
       return d.date;
     }).left;
@@ -33,7 +34,7 @@
     }).y0(height).y1(function(d) {
       return yScale(yValue(d));
     });
-    line = d3.svg.line().x(function(d) {
+    line = d3.svg.line().interpolate("linear").x(function(d) {
       return xScale(xValue(d));
     }).y(function(d) {
       return yScale(yValue(d));
@@ -66,7 +67,7 @@
         lines.append("path").attr("class", "area").style("pointer-events", "none").attr("d", function(c) {
           return area(c.values);
         });
-        lines.append("path").attr("class", "line").style("pointer-events", "none").attr("d", function(c) {
+        lines.append("path").attr("class", "blueline").style("pointer-events", "none").attr("d", function(c) {
           return line(c.values);
         });
         lines.append("text").attr("class", "title").attr("text-anchor", "middle").attr("y", height).attr("dy", margin.bottom / 2 + 5).attr("x", width / 2).text(function(c) {
@@ -146,9 +147,9 @@
   plotData = function(selector, data, plot) {
     return d3.select(selector).datum(data).call(plot);
   };
-
+  
   setupIsoytpe = function() {
-    $("#vis-china").isotope({
+    $("#vis").isotope({
       itemSelector: '.chart',
       layoutMode: 'fitRows',
       getSortData: {
@@ -167,7 +168,7 @@
         }
       }
     });
-    return $("#vis-china").isotope({
+    return $("#vis").isotope({
       sortBy: 'name'
     });
   };
@@ -181,17 +182,17 @@
         console.log(error);
       }
       data = transformData(rawData);
-      plotData("#vis-china", data, plot);
+      plotData("#vis", data, plot);
       return setupIsoytpe();
     };
-    queue().defer(d3.tsv, "data/chinastory.tsv").await(display);
+    queue().defer(d3.tsv, "data/coldwar.tsv").await(display);
     return d3.select("#button-wrap").selectAll("div").on("click", function() {
       var id;
       id = d3.select(this).attr("id");
       d3.select("#button-wrap").selectAll("div").classed("active", false);
       d3.select("#" + id).classed("active", true);
-      return $("#vis-china").isotope({
-        sortBy: 'name'
+      return $("#vis").isotope({
+        sortBy: id
       });
     });
   });
