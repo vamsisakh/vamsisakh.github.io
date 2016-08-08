@@ -51,6 +51,10 @@ display:none;
 display:none;
 }
 
+.pic-text{
+  text-align:center;
+}
+
 #tab0{
 display:none;
 }
