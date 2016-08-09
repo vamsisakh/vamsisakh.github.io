@@ -80,7 +80,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">Describe project here</h3>
+                    <h3 class="section-subheading text-muted">This website explores the history of Summer Olympics from 1896 to current year. Summer Olympics is the ultimate showcase of talent and athleticism for players across the globe. Here, we present the history of these games through interesting data visualizations.
+</h3>
                 </div>
             </div>
             <div class="row text-center">
@@ -90,7 +91,11 @@
                         <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Concept</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Create an easy to use, interactive data visualization for modern olympics data (1896 to current)<br>
+Targets a sports blogging website for an audience interested in Olympic Trivia.<br>
+To explore trends and stats for all Olympics.<br>
+To be able to identify any potential outliers in medal winning patterns.
+</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -98,7 +103,8 @@
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Dataset</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">The dataset consists of the following attributes -Host City,Edition,Sport,Discipline,Athlete,Country,Gender,Event, Gender,Medal type. <br> This dataset is obtained from the International Olympic Committee (IOC). SOurce for this dataset is: http://www.theolympicdatabase.nl/home
+</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -106,7 +112,12 @@
                         <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <p class="text-muted">Provides insights into the dataset in the form of easy to digest stories paired with an interactive visualization.
+Sampling of stories affecting the Olympics:
+    Rise of China since the 1980’s.
+    Cold War
+    World War I
+Provides data exploration capabilities for users to explore the dataset based Year, Sport discipline, Gender, Country and athletes.</p>
                 </div>
             </div>
         </div>
@@ -120,6 +131,8 @@
     <li><a id="ww" href="#worldwar"><strong>World War</strong></a></li>
     <li><a id="cw" href="#coldwar"><strong>Cold War</strong></a></li>
     <li><a id="t0a" href="#t0b"> <strong>Mens 100m Sprint</strong></a></li>
+    <li><a id="t2a" href="#t2b"> <strong>Olympic Participation</strong></a></li>
+
   </ul>
 </div>
 <div class="col-md-7">
@@ -131,6 +144,7 @@
     <div id="worldwar">     </div>
     <div id="coldwar">      </div>
     <div id="t0b">  </div>
+    <div id="t2b">  </div>
 
 </div>
 
@@ -455,11 +469,13 @@
             var det_ww = null;
             var det_aside_ww=null;
             var slides_ww=1;
+            var slides_t2=1;
+            var det_t2=null;
 
         $(document).ready(function(){
             $("#ch").click(function(){
 
-            if((slides +slides_cw +slides_ww +slides_t0)==4){
+            if((slides +slides_cw +slides_ww +slides_t0+slides_t2)==5){
                     $("#direction").css("display","block")
                 }
                 else
@@ -473,7 +489,7 @@
 
         $(document).ready(function(){
             $("#t0a").click(function(){
-            if((slides +slides_cw +slides_ww +slides_t0)==4){
+            if((slides +slides_cw +slides_ww +slides_t0+slides_t2)==5){
                     $("#direction").css("display","block")
                 }
                 else
@@ -484,11 +500,23 @@
             })
         })
 
+  $(document).ready(function(){
+            $("#t2a").click(function(){
+            if((slides +slides_cw +slides_ww +slides_t0+slides_t2)==5){
+                    $("#direction").css("display","block")
+                }
+                else
+                {
+                    $("#direction").css("display","none")
+
+                }
+            })
+        })
 
         $(document).ready(function(){
             $("#cw").click(function(){
 
-            if((slides +slides_cw +slides_ww +slides_t0)==4){
+            if((slides +slides_cw +slides_ww +slides_t0+slides_t2)==5){
                     $("#direction").css("display","block")
                 }
                 else
@@ -503,7 +531,7 @@
         $(document).ready(function(){
             $("#ww").click(function(){
 
-            if((slides +slides_cw +slides_ww +slides_t0)==4){
+            if((slides +slides_cw +slides_ww +slides_t0+slides_t2)==5){
                     $("#direction").css("display","block")
                 }
                 else
@@ -542,6 +570,14 @@
                 det_t0 = $("#tab0").detach();
                 det_t0.hide();
                 slides_t0 = 1;            
+                $("#stories .row .col-md-10").attr('class', 'col-md-7');
+                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
+
+                  if(slides_t2){}
+                    else{
+                det_t2 = $("#tab2").detach();
+                det_t2.hide();
+                slides_t2 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
                 $("#stories .row .col-md-1").attr('class', 'col-md-3');}
 
@@ -605,6 +641,14 @@
                 det_t0 = $("#tab0").detach();
                 det_t0.hide();
                 slides_t0 = 1;            
+                $("#stories .row .col-md-10").attr('class', 'col-md-7');
+                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
+
+                      if(slides_t2){}
+                    else{
+                det_t2 = $("#tab2").detach();
+                det_t2.hide();
+                slides_t2 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
                 $("#stories .row .col-md-1").attr('class', 'col-md-3');}
 
@@ -673,6 +717,14 @@
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
                 $("#stories .row .col-md-1").attr('class', 'col-md-3');}
 
+                      if(slides_t2){}
+                    else{
+                det_t2 = $("#tab2").detach();
+                det_t2.hide();
+                slides_t2 = 1;            
+                $("#stories .row .col-md-10").attr('class', 'col-md-7');
+                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
+
 
         if(slides_cw) {
             if(det_cw){
@@ -736,6 +788,14 @@
                 det_aside_cw.hide(); 
                 slides_cw = 1;}    
 
+                      if(slides_t2){}
+                    else{
+                det_t2 = $("#tab2").detach();
+                det_t2.hide();
+                slides_t2 = 1;            
+                $("#stories .row .col-md-10").attr('class', 'col-md-7');
+                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
+
         if(slides_t0) {
             if(det_t0)
                 {
@@ -762,6 +822,69 @@
         })});
 
  $(document).ready(function(){
+        $("#t2a").click(function(e){
+                e.preventDefault();
+
+                if(slides){}
+                    else{
+                det = $("#insert-china").detach();
+                det.hide();
+                det_aside=$("#insert-china-aside").detach();
+                det_aside.hide(); 
+                slides = 1; 
+                    }
+
+                if(slides_ww){}
+                    else{
+                    det_ww = $("#insert-worldwar").detach();
+                    det_ww.hide();
+                    det_aside_ww=$("#insert-worldwar-aside").detach();
+                    det_aside_ww.hide(); 
+                    slides_ww = 1;   
+                    }
+
+                if(slides_cw){}
+                    else{
+                det_cw = $("#insert-coldwar").detach();
+                det_cw.hide();
+                det_aside_cw=$("#insert-coldwar-aside").detach();
+                det_aside_cw.hide(); 
+                slides_cw = 1;}    
+
+                      if(slides_t0){}
+                    else{
+                det_t0 = $("#tab0").detach();
+                det_t0.hide();
+                slides_t0 = 1;            
+                $("#stories .row .col-md-10").attr('class', 'col-md-7');
+                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
+
+        if(slides_t2) {
+            if(det_t2)
+                {
+                $("#t2b").append(det_t2);
+                }
+            else{
+                $("#t2b").append($("#tab2"));
+                }
+            $("#tab2").css("display","block");
+            slides_t2 = null;
+            $("#direction").css("display","none")
+            $("#stories .row .col-md-7").attr('class', 'col-md-10');
+            $("#stories .row .col-md-3").attr('class', 'col-md-1');
+
+          }
+          else {
+                det_t2 = $("#tab2").detach();
+                det_t2.hide();
+                slides_t2 = 1;            
+                $("#stories .row .col-md-10").attr('class', 'col-md-7');
+                $("#stories .row .col-md-1").attr('class', 'col-md-3');
+                $("#direction").css("display","block")
+            }  
+        })});
+
+ $(document).ready(function(){
             $("#t1b").append($("#tab1"));
             $("#tab1").css("display","block");
         });
@@ -771,6 +894,9 @@
 <div class='tableauPlaceholder' id='viz1470726257250' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;us&#47;usain_bolt&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='usain_bolt&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;us&#47;usain_bolt&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1470726257250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='989px';vizElement.style.minHeight='669px';vizElement.style.maxHeight='780px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 </div>
 
+<div id="tab2">
+<div class='tableauPlaceholder' id='viz1470784339380' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pa&#47;participation_1&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='participation_1&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pa&#47;participation_1&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1470784339380');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1004px';vizElement.style.minHeight='719px';vizElement.style.maxHeight='869px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
 
 
 <div id="tab1">
