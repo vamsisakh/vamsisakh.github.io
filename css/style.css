@@ -39,15 +39,15 @@ text {
   margin-bottom: 0px;
 }
 
-#insert-china,#insert-china-aside{
+#insert-china, #insert-china-aside{
 display:none;
 }
 
-#insert-worldwar,#insert-worldwar-aside{
+#insert-worldwar, #insert-worldwar-aside{
 display:none;
 }
 
-#insert-coldwar,#insert-coldwar-aside{
+#insert-coldwar, #insert-coldwar-aside{
 display:none;
 }
 
@@ -105,10 +105,10 @@ padding-top:60px;
 height:200vh;
 }
 
-#lead_sri {
+/*#lead {
   clear: both;
   width: 800px;
-}
+}*/
 
 #lead p {
   color: #444;
@@ -129,7 +129,7 @@ svg {
   font-size: 12px;
 }
 
-.background {
+.background , .background-ch,.background-ww,.background-cw{
   fill: none;
 }
 
@@ -185,10 +185,10 @@ title {
   display: none;
 }
 
-.hidden {
+/*.hidden {
   display:none;
   opacity: 0.0;
-}
+}*/
 
 #button-wrap {
   width: 220px;

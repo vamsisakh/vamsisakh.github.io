@@ -61,7 +61,12 @@
         div.enter().append("div").attr("class", "chart").append("svg").append("g");
         svg = div.select("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom);
         g = svg.select("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-        g.append("rect").attr("class", "background").style("pointer-events", "all").attr("width", width + margin.right).attr("height", height).on("mouseover", mouseover).on("mousemove", mousemove).on("mouseout", mouseout);
+
+        //d3.selectAll("rect.background").on('mouseover',null);
+        //d3.selectAll("rect.background").on('mouseout',null);
+        //d3.selectAll("rect.background").on('mousemove',null);
+
+        g.append("rect").attr("class", "background-cw").style("pointer-events", "all").attr("width", width + margin.right).attr("height", height).on("mouseover", mouseover).on("mousemove", mousemove).on("mouseout", mouseout);
         lines = g.append("g");
         lines.append("path").attr("class", "bluearea").style("pointer-events", "none").attr("d", function(c) {
           return area(c.values);

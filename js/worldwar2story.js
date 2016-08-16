@@ -61,7 +61,7 @@
         div.enter().append("div").attr("class", "chart").append("svg").append("g");
         svg = div.select("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom);
         g = svg.select("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-        g.append("rect").attr("class", "background").style("pointer-events", "all").attr("width", width + margin.right).attr("height", height).on("mouseover", mouseover).on("mousemove", mousemove).on("mouseout", mouseout);
+        g.append("rect").attr("class", "background-ww").style("pointer-events", "all").attr("width", width + margin.right).attr("height", height).on("mouseover", mouseover).on("mousemove", mousemove).on("mouseout", mouseout);
         lines = g.append("g");
         lines.append("path").attr("class", "greenarea").style("pointer-events", "none").attr("d", function(c) {
           return area(c.values);
@@ -91,6 +91,7 @@
     };
     mousemove = function() {
       var date, index, year;
+      console.log(event);
       year = xScale.invert(d3.mouse(this)[0]).getFullYear();
       date = format.parse('' + year);
       index = 0;

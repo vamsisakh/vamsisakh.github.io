@@ -35,12 +35,12 @@ font-size:2em;
 text-align: center;
 }
 
-#lead {
+/*#lead {
 height:100vh;
 padding-top: 100px;
-}
+}*/
 
-#vis {
+#vis, #vis-china, #vis-worldwar {
 height:100vh;
 padding-top: 10px;
 }

@@ -211,30 +211,18 @@ Provides data exploration capabilities for users to explore the dataset based on
     </section>
 
  <div id="insert-china">
-  <div id="lead_sri" ; word-break="break-all"; word-wrap="break-word";>
+  <div id="lead" ; word-break="break-all"; word-wrap="break-word";>
             <h2>The Rise of China</h2>
         <!--code--> 
             <div class="htext">China was admitted in to the IOC in 1979. China boycotted the 1980 Olympics over Soviet Union's invasion of Afghanistan. China first participated in the Summer Olympics in 1984. Since then, China has been a rising Olympic power starting with 76 medals in 1984 to 184 medals in 2008 at the Beijing Olympics. With that tally, China ranked second in the overall medal count, topping traditional Olympic super powers such as Russia, Germany and Great Britain.
             </div>
         <br>  
     </div>
-        <div id="main">
-            <div id="vis-china" font="Arial" font-size="9"></div>
+       <!-- <div id="main">-->
+            <div id="vis-china" font="Arial" font-size="9">
+      <!--  </div>-->
+
         </div>
-        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
-        <script src="js/libs/coffee-script.js"></script>
-        <script src="js/libs/isotope.pkgd.min.js"></script>
-        <script src="js/libs/d3.js"></script>
-        <script src="js/libs/queue.min.js"></script>
-        <script type="text/javascript" src="js/chinastory.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.bxslider').bxSlider({
-                auto: true,
-                autoStart: true,
-                pause: 8000});
-            });
-        </script>
         </div>
 <div id="insert-china-aside">
         <aside class="stext">
@@ -274,29 +262,30 @@ Provides data exploration capabilities for users to explore the dataset based on
         </div> <!--insert-china-->
 
         <div id="insert-worldwar">
-         <div id="lead_sri"; word-break="break-all"; word-wrap="break-word";>
+         <div id="lead"; word-break="break-all"; word-wrap="break-word";>
             <h2>Olympic Events leading up to World War II (1933 to 1948) </h2>
            <div class="htext">World War II is considered to have officially started on Sept 1, 1939 with the German invasion of Poland. However, the effects of Nazi fascism started with Hitler becoming the German Chancellor on Jan 30, 1933.
             </div>
         <br>  
         </div>
-        <div id="main" >
-            <div id="vis-worldwar" font="Arial" font-size="9"></div>
-        </div>
+        <!--<div id="main" >-->
+            <div id="vis-worldwar" font="Arial" font-size="9">
+        <!--</div>-->
         <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
         <script src="js/libs/coffee-script.js"></script>
         <script src="js/libs/isotope.pkgd.min.js"></script>
         <script src="js/libs/d3.js"></script>
         <script src="js/libs/queue.min.js"></script>
-        <script type="text/javascript" src="js/worldwar2story.js"></script>
-        <script type="text/javascript">
+       <!-- <script type="text/javascript">
             $(document).ready(function() {
                 $('.bxslider').bxSlider({
                 auto: true,
                 autoStart: true,
                 pause: 8000});
             });
-        </script>
+        </script>-->
+        <script type="text/javascript" src="js/worldwar2story.js"></script>
+        </div>
         </div>
 
         <div id="insert-worldwar-aside">
@@ -341,30 +330,31 @@ Provides data exploration capabilities for users to explore the dataset based on
 
 
 <div id="insert-coldwar">
-<div id="lead_sri"; word-break="break-all"; word-wrap="break-word";>
+<div id="lead"; word-break="break-all"; word-wrap="break-word";>
             <h2>Olympics during the Cold War (1948 to 1989) </h2>
         <!--code--> 
             <div class="htext">The politicization of sport became a central theme for world powers following the end of the Second World War. The Olympics brought incredible media attention, required the host nation's financial support and built national reputations . These commercial aspects coupled with the egos of nations having recently gone to war with each other meant that the sporting competitions amongst them would offer a chance to demonstrate which country was superior.
             </div>
         <br>  
         </div>
-        <div id="main" >
-            <div id="vis" font="Arial" font-size="9"></div>
-        </div>
+        <!--<div id="main" >-->
+            <div id="vis" font="Arial" font-size="9">
+        <!--</div>-->
         <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
         <script src="js/libs/coffee-script.js"></script>
         <script src="js/libs/isotope.pkgd.min.js"></script>
         <script src="js/libs/d3.js"></script>
         <script src="js/libs/queue.min.js"></script>
-        <script type="text/javascript" src="js/coldwarstory.js"></script>
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
             $(document).ready(function() {
                 $('.bxslider').bxSlider({
                 auto: true,
                 autoStart: true,
                 pause: 8000});
             });
-        </script>
+        </script>-->
+        <script type="text/javascript" src="js/coldwarstory.js"></script>
+    </div>
         </div>
 
 <div id="insert-coldwar-aside">
@@ -456,8 +446,14 @@ Provides data exploration capabilities for users to explore the dataset based on
     <script src="js/agency.min.js"></script>-->
 
 
+        <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+        <script src="js/libs/coffee-script.js"></script>
+        <script src="js/libs/isotope.pkgd.min.js"></script>
+        <script src="js/libs/d3.js"></script>
+        <script src="js/libs/queue.min.js"></script>
     <!--story-->
    <script>
+
             var det = null;
             var det_aside=null;
             var slides=1;
@@ -549,25 +545,25 @@ Provides data exploration capabilities for users to explore the dataset based on
 
                 if(slides_cw){}
                     else{
-                det_cw = $("#insert-coldwar").detach();
+                det_cw = $("#insert-coldwar");
                 det_cw.hide();
-                det_aside_cw=$("#insert-coldwar-aside").detach();
+                det_aside_cw=$("#insert-coldwar-aside");
                 det_aside_cw.hide(); 
                 slides_cw = 1; 
                     }
 
                 if(slides_ww){}
                     else{
-                    det_ww = $("#insert-worldwar").detach();
+                    det_ww = $("#insert-worldwar");
                     det_ww.hide();
-                    det_aside_ww=$("#insert-worldwar-aside").detach();
+                    det_aside_ww=$("#insert-worldwar-aside");
                     det_aside_ww.hide(); 
                     slides_ww = 1;    
                     }
 
                 if(slides_t0){}
                     else{
-                det_t0 = $("#tab0").detach();
+                det_t0 = $("#tab0");
                 det_t0.hide();
                 slides_t0 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
@@ -575,7 +571,7 @@ Provides data exploration capabilities for users to explore the dataset based on
 
                   if(slides_t2){}
                     else{
-                det_t2 = $("#tab2").detach();
+                det_t2 = $("#tab2");
                 det_t2.hide();
                 slides_t2 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
@@ -584,10 +580,12 @@ Provides data exploration capabilities for users to explore the dataset based on
         if(slides) {
             if(det){
                             $("#china").append(det);
+                            $.getScript("js/chinastory.js");
 
             }
             else{
                                 $("#china").append($("#insert-china"));
+                            $.getScript("js/chinastory.js")
 
             }
             if(det_aside){
@@ -605,9 +603,9 @@ Provides data exploration capabilities for users to explore the dataset based on
 
           }
           else {
-                det = $("#insert-china").detach();
+                det = $("#insert-china");
                 det.hide();
-                det_aside=$("#insert-china-aside").detach();
+                det_aside=$("#insert-china-aside");
                 det_aside.hide(); 
                 slides = 1;
                 $("#direction").css("display","block")
@@ -620,25 +618,25 @@ Provides data exploration capabilities for users to explore the dataset based on
             e.preventDefault();
                         if(slides){}
                     else{
-                det = $("#insert-china").detach();
+                det = $("#insert-china");
                 det.hide();
-                det_aside=$("#insert-china-aside").detach();
+                det_aside=$("#insert-china-aside");
                 det_aside.hide(); 
                 slides = 1; 
                     }
 
                 if(slides_cw){}
                     else{
-                    det_cw = $("#insert-coldwar").detach();
+                    det_cw = $("#insert-coldwar");
                     det_cw.hide();
-                    det_aside_cw=$("#insert-coldwar-aside").detach();
+                    det_aside_cw=$("#insert-coldwar-aside");
                     det_aside_cw.hide(); 
                     slides_cw = 1;    
                     }
 
                 if(slides_t0){}
                     else{
-                det_t0 = $("#tab0").detach();
+                det_t0 = $("#tab0");
                 det_t0.hide();
                 slides_t0 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
@@ -646,7 +644,7 @@ Provides data exploration capabilities for users to explore the dataset based on
 
                       if(slides_t2){}
                     else{
-                det_t2 = $("#tab2").detach();
+                det_t2 = $("#tab2");
                 det_t2.hide();
                 slides_t2 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
@@ -654,11 +652,15 @@ Provides data exploration capabilities for users to explore the dataset based on
 
         if(slides_ww) {
             if(det_ww){
-                            $("#worldwar").append(det_ww);
+            $("#worldwar").append(det_ww);
+            $.getScript("js/worldwar2story.js");
+
 
             }
             else{
-                                $("#worldwar").append($("#insert-worldwar"));
+            $("#worldwar").append($("#insert-worldwar"));
+            $.getScript("js/worldwar2story.js");
+
 
             }
             if(det_aside_ww){
@@ -676,9 +678,9 @@ Provides data exploration capabilities for users to explore the dataset based on
 
           }
           else {
-                det_ww = $("#insert-worldwar").detach();
+                det_ww = $("#insert-worldwar");
                 det_ww.hide();
-                det_aside_ww=$("#insert-worldwar-aside").detach();
+                det_aside_ww=$("#insert-worldwar-aside");
                 det_aside_ww.hide(); 
                 slides_ww = 1; 
                 $("#direction").css("display","block")
@@ -693,25 +695,25 @@ Provides data exploration capabilities for users to explore the dataset based on
                 e.preventDefault();
                 if(slides){}
                     else{
-                det = $("#insert-china").detach();
+                det = $("#insert-china");
                 det.hide();
-                det_aside=$("#insert-china-aside").detach();
+                det_aside=$("#insert-china-aside");
                 det_aside.hide(); 
                 slides = 1; 
                     }
 
                 if(slides_ww){}
                     else{
-                    det_ww = $("#insert-worldwar").detach();
+                    det_ww = $("#insert-worldwar");
                     det_ww.hide();
-                    det_aside_ww=$("#insert-worldwar-aside").detach();
+                    det_aside_ww=$("#insert-worldwar-aside");
                     det_aside_ww.hide(); 
                     slides_ww = 1;    
                     }
 
                 if(slides_t0){}
                     else{
-                det_t0 = $("#tab0").detach();
+                det_t0 = $("#tab0");
                 det_t0.hide();
                 slides_t0 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
@@ -719,7 +721,7 @@ Provides data exploration capabilities for users to explore the dataset based on
 
                       if(slides_t2){}
                     else{
-                det_t2 = $("#tab2").detach();
+                det_t2 = $("#tab2");
                 det_t2.hide();
                 slides_t2 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
@@ -729,10 +731,14 @@ Provides data exploration capabilities for users to explore the dataset based on
         if(slides_cw) {
             if(det_cw){
                             $("#coldwar").append(det_cw);
+                            $.getScript("js/coldwarstory.js");
+
 
             }
             else{
                                 $("#coldwar").append($("#insert-coldwar"));
+                                $.getScript("js/coldwarstory.js");
+
 
             }
             if(det_aside_cw){
@@ -749,9 +755,9 @@ Provides data exploration capabilities for users to explore the dataset based on
                 $("#direction").css("display","none")
           }
           else {
-                det_cw = $("#insert-coldwar").detach();
+                det_cw = $("#insert-coldwar");
                 det_cw.hide();
-                det_aside_cw=$("#insert-coldwar-aside").detach();
+                det_aside_cw=$("#insert-coldwar-aside");
                 det_aside_cw.hide(); 
                 slides_cw = 1; 
                 $("#direction").css("display","block")
@@ -764,33 +770,33 @@ Provides data exploration capabilities for users to explore the dataset based on
 
                 if(slides){}
                     else{
-                det = $("#insert-china").detach();
+                det = $("#insert-china");
                 det.hide();
-                det_aside=$("#insert-china-aside").detach();
+                det_aside=$("#insert-china-aside");
                 det_aside.hide(); 
                 slides = 1; 
                     }
 
                 if(slides_ww){}
                     else{
-                    det_ww = $("#insert-worldwar").detach();
+                    det_ww = $("#insert-worldwar");
                     det_ww.hide();
-                    det_aside_ww=$("#insert-worldwar-aside").detach();
+                    det_aside_ww=$("#insert-worldwar-aside");
                     det_aside_ww.hide(); 
                     slides_ww = 1;   
                     }
 
                 if(slides_cw){}
                     else{
-                det_cw = $("#insert-coldwar").detach();
+                det_cw = $("#insert-coldwar");
                 det_cw.hide();
-                det_aside_cw=$("#insert-coldwar-aside").detach();
+                det_aside_cw=$("#insert-coldwar-aside");
                 det_aside_cw.hide(); 
                 slides_cw = 1;}    
 
                       if(slides_t2){}
                     else{
-                det_t2 = $("#tab2").detach();
+                det_t2 = $("#tab2");
                 det_t2.hide();
                 slides_t2 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
@@ -799,11 +805,12 @@ Provides data exploration capabilities for users to explore the dataset based on
         if(slides_t0) {
             if(det_t0)
                 {
-                $("#t0b").append(det_t0);
+                $("#t0b").append(det_t0)
                 }
             else{
-                $("#t0b").append($("#tab0"));
+                $("#t0b").append($("#tab0"))
                 }
+            console.log("changing tab0 display to block");
             $("#tab0").css("display","block");
             slides_t0 = null;
             $("#direction").css("display","none")
@@ -812,7 +819,7 @@ Provides data exploration capabilities for users to explore the dataset based on
 
           }
           else {
-                det_t0 = $("#tab0").detach();
+                det_t0 = $("#tab0");
                 det_t0.hide();
                 slides_t0 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
@@ -821,39 +828,46 @@ Provides data exploration capabilities for users to explore the dataset based on
             }  
         })});
 
+          $(document).ready(function() {
+                $('.bxslider').bxSlider({
+                auto: true,
+                autoStart: true,
+                pause: 8000});
+            });
+
  $(document).ready(function(){
         $("#t2a").click(function(e){
                 e.preventDefault();
 
                 if(slides){}
                     else{
-                det = $("#insert-china").detach();
+                det = $("#insert-china");
                 det.hide();
-                det_aside=$("#insert-china-aside").detach();
+                det_aside=$("#insert-china-aside");
                 det_aside.hide(); 
                 slides = 1; 
                     }
 
                 if(slides_ww){}
                     else{
-                    det_ww = $("#insert-worldwar").detach();
+                    det_ww = $("#insert-worldwar");
                     det_ww.hide();
-                    det_aside_ww=$("#insert-worldwar-aside").detach();
+                    det_aside_ww=$("#insert-worldwar-aside");
                     det_aside_ww.hide(); 
                     slides_ww = 1;   
                     }
 
                 if(slides_cw){}
                     else{
-                det_cw = $("#insert-coldwar").detach();
+                det_cw = $("#insert-coldwar");
                 det_cw.hide();
-                det_aside_cw=$("#insert-coldwar-aside").detach();
+                det_aside_cw=$("#insert-coldwar-aside");
                 det_aside_cw.hide(); 
                 slides_cw = 1;}    
 
                       if(slides_t0){}
                     else{
-                det_t0 = $("#tab0").detach();
+                det_t0 = $("#tab0");
                 det_t0.hide();
                 slides_t0 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
@@ -862,10 +876,10 @@ Provides data exploration capabilities for users to explore the dataset based on
         if(slides_t2) {
             if(det_t2)
                 {
-                $("#t2b").append(det_t2);
+                $("#t2b").append(det_t2)
                 }
             else{
-                $("#t2b").append($("#tab2"));
+                $("#t2b").append($("#tab2"))
                 }
             $("#tab2").css("display","block");
             slides_t2 = null;
@@ -875,7 +889,7 @@ Provides data exploration capabilities for users to explore the dataset based on
 
           }
           else {
-                det_t2 = $("#tab2").detach();
+                det_t2 = $("#tab2");
                 det_t2.hide();
                 slides_t2 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
