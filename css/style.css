@@ -57,10 +57,12 @@ display:none;
 
 #tab0{
 display:none;
+height:50vh;
 }
 
 #tab2{
 display:none;
+height:50vh;
 }
 
 #tab1{
@@ -68,14 +70,6 @@ display:none;
 padding-left:20px;
 height:200vh;
 padding-left:15%;
-}
-
-#tab0{
-height:50vh;
-}
-
-#tab2{
-height:50vh;
 }
 
 #direction{

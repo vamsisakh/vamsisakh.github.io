@@ -143,8 +143,17 @@ Provides data exploration capabilities for users to explore the dataset based on
     <div id="china">        </div>
     <div id="worldwar">     </div>
     <div id="coldwar">      </div>
-    <div id="t0b">  </div>
-    <div id="t2b">  </div>
+    <div id="t0b"> 
+<div id="tab0">
+<div class='tableauPlaceholder' id='viz1470726257250' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;us&#47;usain_bolt&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='usain_bolt&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;us&#47;usain_bolt&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1470726257250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='989px';vizElement.style.minHeight='669px';vizElement.style.maxHeight='780px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+
+     </div>
+    <div id="t2b">  
+<div id="tab2">
+<div class='tableauPlaceholder' id='viz1470784339380' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pa&#47;participation_1&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='participation_1&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pa&#47;participation_1&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1470784339380');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1004px';vizElement.style.minHeight='719px';vizElement.style.maxHeight='869px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+    </div>
 
 </div>
 
@@ -717,7 +726,7 @@ Provides data exploration capabilities for users to explore the dataset based on
                 det_t0.hide();
                 slides_t0 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
-                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
+                $("#stories .row .col-md-1").attr('class', 'col-md-3')}
 
                       if(slides_t2){}
                     else{
@@ -725,7 +734,7 @@ Provides data exploration capabilities for users to explore the dataset based on
                 det_t2.hide();
                 slides_t2 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
-                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
+                $("#stories .row .col-md-1").attr('class', 'col-md-3')}
 
 
         if(slides_cw) {
@@ -769,53 +778,46 @@ Provides data exploration capabilities for users to explore the dataset based on
                 e.preventDefault();
 
                 if(slides){}
-                    else{
+                    else {
                 det = $("#insert-china");
                 det.hide();
                 det_aside=$("#insert-china-aside");
                 det_aside.hide(); 
-                slides = 1; 
+                slides = 1
                     }
 
                 if(slides_ww){}
-                    else{
+                    else {
                     det_ww = $("#insert-worldwar");
                     det_ww.hide();
                     det_aside_ww=$("#insert-worldwar-aside");
                     det_aside_ww.hide(); 
-                    slides_ww = 1;   
+                    slides_ww = 1
                     }
 
                 if(slides_cw){}
-                    else{
+                    else {
                 det_cw = $("#insert-coldwar");
                 det_cw.hide();
                 det_aside_cw=$("#insert-coldwar-aside");
                 det_aside_cw.hide(); 
-                slides_cw = 1;}    
+                slides_cw = 1
+            }    
 
                       if(slides_t2){}
-                    else{
+                    else {
                 det_t2 = $("#tab2");
                 det_t2.hide();
                 slides_t2 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
-                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
+                $("#stories .row .col-md-1").attr('class', 'col-md-3')}
 
         if(slides_t0) {
-            if(det_t0)
-                {
-                $("#t0b").append(det_t0)
-                }
-            else{
-                $("#t0b").append($("#tab0"))
-                }
             $("#tab0").css("display","block");
             slides_t0 = null;
-            $("#direction").css("display","none")
+            $("#direction").css("display","none");
             $("#stories .row .col-md-7").attr('class', 'col-md-10');
-            $("#stories .row .col-md-3").attr('class', 'col-md-1');
-
+            $("#stories .row .col-md-3").attr('class', 'col-md-1')
           }
           else {
                 det_t0 = $("#tab0");
@@ -844,7 +846,7 @@ Provides data exploration capabilities for users to explore the dataset based on
                 det.hide();
                 det_aside=$("#insert-china-aside");
                 det_aside.hide(); 
-                slides = 1; 
+                slides = 1 
                     }
 
                 if(slides_ww){}
@@ -853,7 +855,7 @@ Provides data exploration capabilities for users to explore the dataset based on
                     det_ww.hide();
                     det_aside_ww=$("#insert-worldwar-aside");
                     det_aside_ww.hide(); 
-                    slides_ww = 1;   
+                    slides_ww = 1  
                     }
 
                 if(slides_cw){}
@@ -862,55 +864,37 @@ Provides data exploration capabilities for users to explore the dataset based on
                 det_cw.hide();
                 det_aside_cw=$("#insert-coldwar-aside");
                 det_aside_cw.hide(); 
-                slides_cw = 1;}    
+                slides_cw = 1
+            }
 
                       if(slides_t0){}
-                    else{
+                    else {
                 det_t0 = $("#tab0");
                 det_t0.hide();
                 slides_t0 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
-                $("#stories .row .col-md-1").attr('class', 'col-md-3');}
+                $("#stories .row .col-md-1").attr('class', 'col-md-3')}
 
         if(slides_t2) {
-            if(det_t2)
-                {
-                $("#t2b").append(det_t2)
-                }
-            else{
-                $("#t2b").append($("#tab2"))
-                }
             $("#tab2").css("display","block");
             slides_t2 = null;
-            $("#direction").css("display","none")
+            $("#direction").css("display","none");
             $("#stories .row .col-md-7").attr('class', 'col-md-10');
-            $("#stories .row .col-md-3").attr('class', 'col-md-1');
-
-          }
+            $("#stories .row .col-md-3").attr('class', 'col-md-1')}
           else {
                 det_t2 = $("#tab2");
                 det_t2.hide();
                 slides_t2 = 1;            
                 $("#stories .row .col-md-10").attr('class', 'col-md-7');
                 $("#stories .row .col-md-1").attr('class', 'col-md-3');
-                $("#direction").css("display","block")
-            }  
+                $("#direction").css("display","block")}  
         })});
 
  $(document).ready(function(){
             $("#t1b").append($("#tab1"));
-            $("#tab1").css("display","block");
+            $("#tab1").css("display","block")
         });
     </script>
-
-<div id="tab0">
-<div class='tableauPlaceholder' id='viz1470726257250' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;us&#47;usain_bolt&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='usain_bolt&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;us&#47;usain_bolt&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1470726257250');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='989px';vizElement.style.minHeight='669px';vizElement.style.maxHeight='780px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-</div>
-
-<div id="tab2">
-<div class='tableauPlaceholder' id='viz1470784339380' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pa&#47;participation_1&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='participation_1&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pa&#47;participation_1&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1470784339380');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1004px';vizElement.style.minHeight='719px';vizElement.style.maxHeight='869px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-</div>
-
 
 <div id="tab1">
 <div class='tableauPlaceholder' id='viz1470634731877' style='position: relative'><noscript><a href='#'><img alt=' ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_3&#47;SummerOlympicsDashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='viz_3&#47;SummerOlympicsDashboard' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;viz_3&#47;SummerOlympicsDashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1470634731877');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1004px';vizElement.style.height='895px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
